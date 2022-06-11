@@ -16,7 +16,7 @@ public class SQLDataAcces
     public async Task<IEnumerable<T>> LoadData<T, U>(
         string storedProcedure,
         U parameters,
-        string connectionId = "Default")
+        string connectionId = "Default") 
     {
         using IDbConnection connection = new SqlConnection(_confiq.GetConnectionString(connectionId));
     }
